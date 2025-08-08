@@ -1,6 +1,6 @@
-package med.voll.api.model;
+package med.voll.api.medico;
 
-import med.voll.api.direccion.Direccion;
+import med.voll.api.direccion.DatosDireccion;
 
 public record DatosRegistroMedico (
         String nombre,
@@ -8,6 +8,6 @@ public record DatosRegistroMedico (
         String telefono,
         String documento,
         Especialidad especialidad,
-        Direccion direccion
+        DatosDireccion direccion
 ){}
 
