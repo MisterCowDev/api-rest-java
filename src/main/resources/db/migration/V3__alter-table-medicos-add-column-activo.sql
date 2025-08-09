@@ -1,1 +1,2 @@
-ALTER TABLE medicos ADD telefono VARCHAR(20) NOT NULL;
+ALTER TABLE medicos ADD activo tinyint;
+update medicos set activo = 1;
