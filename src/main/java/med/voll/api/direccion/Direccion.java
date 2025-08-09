@@ -1,8 +1,6 @@
 package med.voll.api.direccion;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,5 +26,29 @@ public class Direccion {
         this.ciudad = datosDireccion.ciudad();
         this.codigoPostal = datosDireccion.codigoPostal();
         this.estado = datosDireccion.estado();
+    }
+
+    public void actualizarDireccion(DatosDireccion datos) {
+        if (datos.calle() != null){
+            this.calle = datos.calle();
+        }
+        if (datos.numero() != null){
+            this.numero = datos.numero();
+        }
+        if (datos.complemento() != null){
+            this.complemento = datos.complemento();
+        }
+        if (datos.barrio() != null){
+            this.barrio = datos.barrio();
+        }
+        if (datos.ciudad() != null){
+            this.ciudad = datos.ciudad();
+        }
+        if (datos.codigoPostal() != null){
+            this.codigoPostal = datos.codigoPostal();
+        }
+        if (datos.estado() != null){
+            this.estado = datos.estado();
+        }
     }
 }
