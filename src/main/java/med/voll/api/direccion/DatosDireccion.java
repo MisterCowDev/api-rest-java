@@ -1,12 +1,17 @@
 package med.voll.api.direccion;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+
 public record DatosDireccion(
-        String calle,
+        @NotBlank String calle,
         String numero,
         String complemento,
-        String barrio,
-        String ciudad,
-        String codigoPostal,
-        String estado
+        @NotBlank String barrio,
+        @NotBlank String ciudad,
+        @NotBlank @Pattern(regexp = "\\d{8,10}") @JsonProperty("codigo_postal") String codigoPostal,
+        @NotBlank String estado
 ) {
 }
