@@ -1,4 +1,4 @@
-package med.voll.api.direccion;
+package med.voll.api.domain.direccion;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;
